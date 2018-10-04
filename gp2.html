@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html id="htmlbackground">
+    
+    <head>
+        
+        <link  rel="stylesheet" type="text/css" href="gp2.css">
+    </head>
+        
+    <body>
+        
+        <div></br></div>
+        
+        <div class = 'smallgame' onclick = "missed()">
+            <div class='a' id = "a" onclick = "gotit()"> </div>
+            <span class= 'timer' id = "timer">0.0</span>
+        </div>
+        
+        <div class ='selection'> 
+            <text>Choose your level: <text>
+            <select id = "level" onchange ='getlv()'>
+                <option value="">none
+                <option value="easy">easy
+                <option value="normal">normal
+                <option value="hard">hard
+                <option value="brutal">brutal
+            </select>
+        
+        
+        <div id = "ttt" color = white> <text>this is where the magic occurs<text> <div>
+        <form>
+            Search for a game: <input type="text" id="searchField" value="">
+            <input id ='submitButton' type="submit" value="Submit">
+            <p id="answers"></p>
+        </form>
+        </section>
+        
+        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src = "gp2.js"></script>
+    </body>
+</html>

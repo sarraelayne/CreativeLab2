@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>City Finder</title>
+<script
+  src="http://code.jquery.com/jquery-3.2.1.min.js">
+</script>
+</head>
+<body>
+
+<div id='Label11'>No weather</div>
+
+<script> 
+/*global $*/
+$(document).ready(function(){
+        var URL = 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=';
+
+        URL += "&titles=" + "Dark Souls III";
+        URL += "&rvprop=content";
+        URL += "&callback=?";
+        console.log(URL);
+        $.getJSON(URL, function (data) {
+          console.log(data);
+            var obj = data.query.pages;
+            var ob = Object.keys(obj)[0];
+            console.log(obj[ob]["extract"]);
+            try{
+                document.getElementById('Label11').textContent = obj[ob]["extract"];
+            }
+            catch (err) {
+                document.getElementById('Label11').textContent = err.message;
+            }
+
+        });
+  
+});
+</script>
+
+</body>
+</html>
